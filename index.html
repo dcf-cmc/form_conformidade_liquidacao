@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist de Auditoria de Conformidade - CMC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="form-container">
+        <header class="form-header">
+            <img src="logo.png" alt="CMC Logo" class="header-logo">
+            <h1>Checklist de Auditoria de Conformidade</h1>
+            <p>Divisão de Contas a Pagar - CMC</p>
+        </header>
+
+        <main>
+            <section class="info-section">
+                <div class="input-group">
+                    <label for="processo">PROCESSO:</label>
+                    <input type="text" id="processo" placeholder="01234/2026" maxlength="10">
+                </div>
+                <div class="input-group">
+                    <label for="fornecedor">FORNECEDOR:</label>
+                    <input type="text" id="fornecedor" placeholder="Nome do fornecedor">
+                </div>
+            </section>
+
+            <form id="checklist-form">
+                <div class="category">
+                    <h2>I - ITENS VERIFICADOS NO CADASTRO DO PROCESSO</h2>
+                    <div class="items-list">
+                        <label class="check-item"><input type="checkbox" data-id="I-1"> <span>1. O Subprocesso de
+                                Pagamento está vinculado ao Processo Pai correspondente?</span></label>
+                        <label class="check-item"><input type="checkbox" data-id="I-2"> <span>2. O Subprocesso foi
+                                aberto pelo Focal competente?</span></label>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h2>II - ITENS VERIFICADOS NO ATESTO</h2>
+                    <div class="items-list">
+                        <label class="check-item"><input type="checkbox" data-id="II-1"> <span>1. O nome e o CNPJ da
+                                contratada estão de acordo com a Nota de Empenho?</span></label>
+                        <label class="check-item"><input type="checkbox" data-id="II-2"> <span>2. O número e o ano do
+                                Contrato estão de acordo com o Contrato?</span></label>
+                        <label class="check-item"><input type="checkbox" data-id="II-3"> <span>3. O Contrato estava
+                                vigente no período da prestação do serviço ou entrega dos bens?</span></label>
+                        <label class="check-item"><input type="checkbox" data-id="II-4"> <span>4. O número e o ano da
+                                Nota de Empenho estão corretos?</span></label>
+                        <label class="check-item"><input type="checkbox" data-id="II-5"> <span>5. A Nota de Empenho tem
+                                data de emissão igual ou anterior à data da realização da despesa?</span></label>
+                        <label class="check-item"><input type="checkbox" data-id="II-6"> <span>6. A Nota de Empenho
+                                possui saldo suficiente para a liquidação da despesa?</span></label>
+                        <label class="check-item"><input type="checkbox" data-id="II-7"> <span>7. O período de
+                                execução/entrega do objeto está correto e de acordo com o Contrato e com a Nota de
+                                Empenho?</span></label>
+                        <label class="check-item"><input type="checkbox" data-id="II-8"> <span>8. O período a que se
+                                refere a Nota de Empenho está de acordo com o período da execução da
+                                despesa?</span></label>
+                        <label class="check-item"><input type="checkbox" data-id="II-9"> <span>9. O(s) número(s) da(s)
+                                Nota(s) Fiscal(is) e data(s) de emissão está(ão) de acordo com a(s) Nota(s) Fiscal(is)
+                                anexada(s)?</span></label>
+                        <label class="check-item"><input type="checkbox" data-id="II-10"> <span>10. A descrição do
+                                objeto está de acordo com a Nota Fiscal e com a Nota de Empenho?</span></label>
+                        <label class="check-item"><input type="checkbox" data-id="II-11"> <span>11. Em caso de Atesto
+                                com mais de um item, a soma dos itens confere com o total que consta no
+                                Atesto?</span></label>
+                        <label class="check-item"><input type="checkbox" data-id="II-12"> <span>12. O valor informado no
+                                Atesto confere com o valor bruto da nota fiscal, ou soma das notas
+                                fiscais?</span></label>
+                        <label class="check-item"><input type="checkbox" data-id="II-13"> <span>13. O Atesto tem data de
+                                emissão igual ou posterior à data da prestação do serviço ou entrega dos
+                                bens?</span></label>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h2>III - ITENS VERIFICADOS NA NOTA FISCAL</h2>
+                    <div class="items-list">
+                        <label class="check-item"><input type="checkbox" data-id="III-1"> <span>1. A Nota Fiscal é
+                                autêntica?</span></label>
+                        <label class="check-item"><input type="checkbox" data-id="III-2"> <span>2. O nome e o CNPJ da
+                                contratada estão de acordo com a Nota de Empenho?</span></label>
+                        <label class="check-item"><input type="checkbox" data-id="III-3"> <span>3. Os dados do Tomador
+                                de serviços ou Adquirente de produtos estão corretos?</span></label>
+                        <label class="check-item"><input type="checkbox" data-id="III-4"> <span>4. O valor bruto da nota
+                                fiscal, ou soma das notas fiscais, confere com o valor informado no
+                                Atesto?</span></label>
+                        <label class="check-item"><input type="checkbox" data-id="III-5"> <span>5. Os itens/serviços
+                                descritos na Nota Fiscal são os mesmos do Atesto?</span></label>
+                        <label class="check-item"><input type="checkbox" data-id="III-6"> <span>6. A descrição e o valor
+                                unitário do(s) bem(ns)/serviço(s) está(ão) de acordo com o Contrato e suas
+                                alterações?</span></label>
+                        <label class="check-item"><input type="checkbox" data-id="III-7"> <span>7. A competência da
+                                prestação do serviço está correta e é a mesma que consta no Atesto?</span></label>
+                        <label class="check-item"><input type="checkbox" data-id="III-8"> <span>8. As retenções de ISS,
+                                IR e INSS foram discriminadas com bases de cálculo, alíquotas e valores
+                                corretos?</span></label>
+                        <label class="check-item"><input type="checkbox" data-id="III-9"> <span>9. Informações extras,
+                                caso constem na nota fiscal, estão corretas?</span></label>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h2>V - OUTROS ITENS VERIFICADOS</h2>
+                    <div class="items-list">
+                        <label class="check-item"><input type="checkbox" data-id="V-1"> <span>1. A empresa é optante
+                                pelo Simples Nacional (consultar)? Em caso afirmativo, consta a Consulta de Optantes
+                                atualizada no processo?</span></label>
+                        <label class="check-item"><input type="checkbox" data-id="V-2"> <span>2. Em caso de empresa
+                                optante pelo Simples Nacional, foi apresentada a declaração de enquadramento prevista no
+                                art. 4º, § 2º da Portaria 23/2022 - Prefeitura de Curitiba - Anexo IV?</span></label>
+                        <label class="check-item"><input type="checkbox" data-id="V-3"> <span>3. Em caso de empresa
+                                beneficiária de outro tipo de isenção, não incidência ou alíquota zero, foi apresentada a
+                                devida declaração de enquadramento prevista no art. 4º, § 2º da Portaria 23/2022 -
+                                Prefeitura de Curitiba?</span></label>
+                        <label class="check-item"><input type="checkbox" data-id="V-4"> <span>4. Em caso de aquisição de
+                                produtos, consta no processo o relatório "Movimentação de Recebimentos de Empenho"
+                                emitido pela Divisão de Material de Consumo de acordo com os dados constantes na Nota
+                                Fiscal?</span></label>
+                        <label class="check-item"><input type="checkbox" data-id="V-5"> <span>5. Em caso de aquisição de
+                                bens móveis, consta no processo o relatório "Plaquetas do Empenho" emitido pelo Setor de
+                                Gestão de Patrimônio e Serviços de acordo com os dados constantes na Nota
+                                Fiscal?</span></label>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button type="button" id="generate-btn">Gerar Checklist</button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <div id="pdf-copy-container" style="display: none;">
+        <div class="pdf-page">
+            <header class="pdf-header">
+                <div class="pdf-header-top">
+                    <div class="pdf-logo-box">
+                        <img src="logo.png" alt="CMC Logo" class="pdf-logo">
+                    </div>
+                    <div class="pdf-title-box">
+                        <p class="pdf-inst">CÂMARA MUNICIPAL DE CURITIBA</p>
+                        <p class="pdf-dept">CONTROLADORIA</p>
+                    </div>
+                </div>
+                <div class="pdf-header-main">
+                    <p>CHECKLIST DE AUDITORIA DE CONFORMIDADE</p>
+                    <p>PROCESSO DE PAGAMENTO</p>
+                    <p>RESPONSÁVEL: DIVISÃO DE CONTAS A PAGAR</p>
+                </div>
+            </header>
+
+            <div class="pdf-info-box">
+                <p><strong>PROCESSO:</strong> <span id="pdf-processo"></span></p>
+                <p><strong>FORNECEDOR:</strong> <span id="pdf-fornecedor"></span></p>
+            </div>
+
+            <table class="pdf-table">
+                <thead>
+                    <tr>
+                        <th>I - ITENS VERIFICADOS NO CADASTRO DO PROCESSO</th>
+                        <th class="col-resp">Resposta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. O Subprocesso de Pagamento está vinculado ao Processo Pai correspondente?</td>
+                        <td class="pdf-mark" data-pdf-id="I-1"></td>
+                    </tr>
+                    <tr>
+                        <td>2. O Subprocesso foi aberto pelo Focal competente?</td>
+                        <td class="pdf-mark" data-pdf-id="I-2"></td>
+                    </tr>
+                </tbody>
+
+                <thead>
+                    <tr>
+                        <th>II - ITENS VERIFICADOS NO ATESTO</th>
+                        <th class="col-resp">Resposta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. O nome e o CNPJ da contratada estão de acordo com a Nota de Empenho?</td>
+                        <td class="pdf-mark" data-pdf-id="II-1"></td>
+                    </tr>
+                    <tr>
+                        <td>2. O número e o ano do Contrato estão de acordo com o Contrato?</td>
+                        <td class="pdf-mark" data-pdf-id="II-2"></td>
+                    </tr>
+                    <tr>
+                        <td>3. O Contrato estava vigente no período da prestação do serviço ou entrega dos bens?</td>
+                        <td class="pdf-mark" data-pdf-id="II-3"></td>
+                    </tr>
+                    <tr>
+                        <td>4. O número e o ano da Nota de Empenho estão corretos?</td>
+                        <td class="pdf-mark" data-pdf-id="II-4"></td>
+                    </tr>
+                    <tr>
+                        <td>5. A Nota de Empenho tem data de emissão igual ou anterior à data da realização da despesa?
+                        </td>
+                        <td class="pdf-mark" data-pdf-id="II-5"></td>
+                    </tr>
+                    <tr>
+                        <td>6. A Nota de Empenho possui saldo suficiente para a liquidação da despesa?</td>
+                        <td class="pdf-mark" data-pdf-id="II-6"></td>
+                    </tr>
+                    <tr>
+                        <td>7. O período de execução/entrega do objeto está correto e de acordo com o Contrato e com a
+                            Nota de Empenho?</td>
+                        <td class="pdf-mark" data-pdf-id="II-7"></td>
+                    </tr>
+                    <tr>
+                        <td>8. O período a que se refere a Nota de Empenho está de acordo com o período da execução da
+                            despesa?</td>
+                        <td class="pdf-mark" data-pdf-id="II-8"></td>
+                    </tr>
+                    <tr>
+                        <td>9. O(s) número(s) da(s) Nota(s) Fiscal(is) e data(s) de emissão está(ão) de acordo com a(s)
+                            Nota(s) Fiscal(is) anexada(s)?</td>
+                        <td class="pdf-mark" data-pdf-id="II-9"></td>
+                    </tr>
+                    <tr>
+                        <td>10. A descrição do objeto está de acordo com a Nota Fiscal e com a Nota de Empenho?</td>
+                        <td class="pdf-mark" data-pdf-id="II-10"></td>
+                    </tr>
+                    <tr>
+                        <td>11. Em caso de Atesto com mais de um item, a soma dos itens confere com o total que consta
+                            no Atesto?</td>
+                        <td class="pdf-mark" data-pdf-id="II-11"></td>
+                    </tr>
+                    <tr>
+                        <td>12. O valor informado no Atesto confere com o valor bruto da nota fiscal, ou soma das notas
+                            fiscais? (considerar eventual glosa ou multa registrada no atesto)</td>
+                        <td class="pdf-mark" data-pdf-id="II-12"></td>
+                    </tr>
+                    <tr>
+                        <td>13. O Atesto tem data de emissão igual ou posterior à data da prestação do serviço ou
+                            entrega dos bens?</td>
+                        <td class="pdf-mark" data-pdf-id="II-13"></td>
+                    </tr>
+                </tbody>
+
+                <thead>
+                    <tr>
+                        <th>III - ITENS VERIFICADOS NA NOTA FISCAL</th>
+                        <th class="col-resp">Resposta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. A Nota Fiscal é autêntica? (Consultar portal da NFE, nos casos de bens e produtos, ou
+                            site do Município onde está sediada a empresa, no caso de NF de serviços)</td>
+                        <td class="pdf-mark" data-pdf-id="III-1"></td>
+                    </tr>
+                    <tr>
+                        <td>2. O nome e o CNPJ da contratada estão de acordo com a Nota de Empenho?</td>
+                        <td class="pdf-mark" data-pdf-id="III-2"></td>
+                    </tr>
+                    <tr>
+                        <td>3. Os dados do Tomador de serviços ou Adquirente de produtos estão corretos?</td>
+                        <td class="pdf-mark" data-pdf-id="III-3"></td>
+                    </tr>
+                    <tr>
+                        <td>4. O valor bruto da nota fiscal, ou soma das notas fiscais, confere com o valor informado no
+                            Atesto?</td>
+                        <td class="pdf-mark" data-pdf-id="III-4"></td>
+                    </tr>
+                    <tr>
+                        <td>5. Os itens/serviços descritos na Nota Fiscal são os mesmos do Atesto?</td>
+                        <td class="pdf-mark" data-pdf-id="III-5"></td>
+                    </tr>
+                    <tr>
+                        <td>6. A descrição e o valor unitário do(s) bem(ns)/serviço(s) está(ão) de acordo com o Contrato
+                            e suas alterações?</td>
+                        <td class="pdf-mark" data-pdf-id="III-6"></td>
+                    </tr>
+                    <tr>
+                        <td>7. A competência da prestação do serviço está correta e é a mesma que consta no Atesto?</td>
+                        <td class="pdf-mark" data-pdf-id="III-7"></td>
+                    </tr>
+                    <tr>
+                        <td>8. As retenções de ISS, IR e INSS foram discriminadas com bases de cálculo, alíquotas e
+                            valores corretos?</td>
+                        <td class="pdf-mark" data-pdf-id="III-8"></td>
+                    </tr>
+                    <tr>
+                        <td>9. Informações extras (que não são exigidas pela CMC) como número do Contrato e número da
+                            Nota de Empenho, caso constem na nota fiscal, estão corretas?</td>
+                        <td class="pdf-mark" data-pdf-id="III-9"></td>
+                    </tr>
+                </tbody>
+
+                <thead>
+                    <tr>
+                        <th>V - OUTROS ITENS VERIFICADOS</th>
+                        <th class="col-resp">Resposta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. A empresa é optante pelo Simples Nacional (consultar)? Em caso afirmativo, consta a
+                            Consulta de Optantes atualizada no processo?</td>
+                        <td class="pdf-mark" data-pdf-id="V-1"></td>
+                    </tr>
+                    <tr>
+                        <td>2. Em caso de empresa optante pelo Simples Nacional, foi apresentada a declaração de
+                            enquadramento prevista no art. 4º, § 2º da Portaria 23/2022 - Prefeitura de Curitiba - Anexo
+                            IV?</td>
+                        <td class="pdf-mark" data-pdf-id="V-2"></td>
+                    </tr>
+                    <tr>
+                        <td>3. Em caso de empresa beneficiária de outro tipo de isenção, não incidência ou alíquota
+                            zero, foi apresentada a devida declaração de enquadramento prevista no art. 4º, § 2º da
+                            Portaria 23/2022 - Prefeitura de Curitiba?</td>
+                        <td class="pdf-mark" data-pdf-id="V-3"></td>
+                    </tr>
+                    <tr>
+                        <td>4. Em caso de aquisição de produtos, consta no processo o relatório "Movimentação de
+                            Recebimentos de Empenho" emitido pela Divisão de Material de Consumo de acordo com os dados
+                            constantes na Nota Fiscal?</td>
+                        <td class="pdf-mark" data-pdf-id="V-4"></td>
+                    </tr>
+                    <tr>
+                        <td>5. Em caso de aquisição de bens móveis, consta no processo o relatório "Plaquetas do
+                            Empenho" emitido pelo Setor de Gestão de Patrimônio e Serviços de acordo com os dados
+                            constantes na Nota Fiscal?</td>
+                        <td class="pdf-mark" data-pdf-id="V-5"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pdf-actions no-print">
+            <button type="button" id="back-btn">Voltar ao Formulário</button>
+            <button type="button" id="print-btn">Imprimir / Salvar PDF</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
