@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const id = checkbox.getAttribute('data-id');
             const pdfCell = document.querySelector(`.pdf-mark[data-pdf-id="${id}"]`);
             if (pdfCell) {
-                pdfCell.textContent = checkbox.checked ? 'Conforme' : 'Não conforme';
+                pdfCell.textContent = checkbox.checked ? '✔' : '✘';
             }
         });
 
